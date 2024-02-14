@@ -1,7 +1,6 @@
 import React from 'react';
 import {TouchableOpacity, StyleSheet} from 'react-native';
-import {DARK_PURPLE} from './colors';
-import {H2} from '.';
+import {DARK_PURPLE} from '../Assets/colors';
 
 const DpTouchableOpacity = ({children, onPress, style}) => {
   return (

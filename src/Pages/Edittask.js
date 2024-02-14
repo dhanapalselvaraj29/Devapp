@@ -1,23 +1,23 @@
 import React from 'react';
-import {DARK_PURPLE} from '../Atoms/colors';
 import {StyleSheet, StatusBar} from 'react-native';
-
+import InputContainer from '../Molecules/InputContainer';
+import {DARK_PURPLE} from '../Assets/colors';
 import Container from '../Molecules/Container';
-import Inputcontainer from '../Molecules/Inputcontainer';
 import {DpTouchableOpacity, DpView, H2} from '../Atoms';
-const Edittask = () => {
+
+const EditTask = () => {
   return (
-    <DpView style={styles.maincontainer}>
+    <DpView style={styles.mainContainer}>
       <StatusBar barStyle="light-content" backgroundColor={DARK_PURPLE} />
-      <Container Title={'Edit Task'} showIcon={true} />
+      <Container title={'Edit Task'} showIcon={true} />
       <DpView style={styles.container}>
-        <DpView style={styles.inputbox}>
-          <Inputcontainer placeholder={'Title'} />
-          <Inputcontainer placeholder={'Description'} />
+        <DpView style={styles.inputBox}>
+          <InputContainer placeholder={'Title'} />
+          <InputContainer placeholder={'Description'} />
         </DpView>
-        <DpView style={{}}>
-          <DpTouchableOpacity onPress={undefined} style={styles}>
-            <H2 style={{}}>Update</H2>
+        <DpView>
+          <DpTouchableOpacity onPress={undefined} style={styles.updateButton}>
+            <H2>Update</H2>
           </DpTouchableOpacity>
         </DpView>
       </DpView>
@@ -26,16 +26,16 @@ const Edittask = () => {
 };
 
 const styles = StyleSheet.create({
-  maincontainer: {
+  mainContainer: {
     flex: 1,
   },
   container: {
     flex: 1,
     padding: 20,
   },
-  inputbox: {
+  inputBox: {
     flex: 1,
   },
 });
 
-export default Edittask;
+export default EditTask;

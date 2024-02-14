@@ -1,37 +1,37 @@
 import React from 'react';
-import {DpView, H2, H3} from '../Atoms';
 import {StyleSheet} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import {WHITE_COLOR} from '../Atoms/colors';
+import {DARK_PURPLE, WHITE_COLOR} from '../Assets/colors';
+import {H3, DpView} from '../Atoms';
 
 const CardList = ({title, description}) => {
   return (
-    <DpView style={styles.maincontainer}>
-      <DpView style={styles.Textcontainer}>
+    <DpView style={styles.mainContainer}>
+      <DpView style={styles.textContainer}>
         <H3>{title}</H3>
         <H3>{description}</H3>
       </DpView>
-      <DpView style={styles.iconcontainer}>
-        <Icon name="edit" size={30} color="#B3B7EE" />
-        <Icon name="delete" size={30} color="#B3B7EE" />
+      <DpView style={styles.iconContainer}>
+        <Icon name="edit" size={30} color={DARK_PURPLE} />
+        <Icon name="delete" size={30} color={DARK_PURPLE} />
       </DpView>
     </DpView>
   );
 };
+
 const styles = StyleSheet.create({
-  maincontainer: {
+  mainContainer: {
     backgroundColor: WHITE_COLOR,
     flexDirection: 'row',
     padding: 15,
     marginBottom: 15,
     borderRadius: 10,
   },
-  Textcontainer: {
+  textContainer: {
     flex: 1,
     justifyContent: 'center',
   },
-
-  iconcontainer: {
+  iconContainer: {
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',

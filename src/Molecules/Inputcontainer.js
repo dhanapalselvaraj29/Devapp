@@ -1,20 +1,18 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import {StyleSheet} from 'react-native';
-import {DARK_PURPLE} from '../Atoms/colors';
 import {DpTextInput, DpView} from '../Atoms';
 
-const Inputcontainer = ({placeholder}) => {
+const InputContainer = ({placeholder}) => {
   return (
-    <DpView styles={styles.contentContainer}>
+    <DpView style={styles.contentContainer}>
       <DpTextInput style={styles.inputWrapper} placeholder={placeholder} />
     </DpView>
   );
 };
 
 const styles = StyleSheet.create({
-  contentContainer: {},
   inputWrapper: {marginTop: 20},
 });
 
-export default Inputcontainer;
+export default InputContainer;

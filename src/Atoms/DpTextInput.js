@@ -1,6 +1,6 @@
 import React from 'react';
 import {TextInput, StyleSheet} from 'react-native';
-import {DARK_PURPLE, LIGHT_BLACK} from './colors';
+import {DARK_PURPLE, LIGHT_BLACK} from '../Assets/colors';
 
 const DpTextInput = ({style, ...props}) => {
   return <TextInput style={[styles.TextInput, style]} {...props} />;

@@ -1,27 +1,28 @@
-import React from 'react';
-import {DARK_PURPLE} from '../Atoms/colors';
+/* eslint-disable no-unused-vars */
+import React, {useState} from 'react';
 import {StyleSheet, StatusBar} from 'react-native';
-import {useState} from 'react';
-import Container from '../Molecules/Container';
-import Inputcontainer from '../Molecules/Inputcontainer';
+import InputContainer from '../Molecules/InputContainer';
 import {DpTouchableOpacity, DpView, H2} from '../Atoms';
+import Container from '../Molecules/Container';
+import {DARK_PURPLE} from '../Assets/colors';
 
-const Addtask = () => {
+const AddTask = () => {
   const handleAddTask = () => {
     console.log('Input Value:');
   };
+
   return (
-    <DpView style={styles.maincontainer}>
+    <DpView style={styles.mainContainer}>
       <StatusBar barStyle="light-content" backgroundColor={DARK_PURPLE} />
-      <Container Title={'Add Task'} showIcon={true} />
+      <Container title={'Add Task'} showIcon={true} />
       <DpView style={styles.container}>
-        <DpView style={styles.inputbox}>
-          <Inputcontainer placeholder={'Title'} />
-          <Inputcontainer placeholder={'Description'} />
+        <DpView style={styles.inputBox}>
+          <InputContainer placeholder={'Title'} />
+          <InputContainer placeholder={'Description'} />
         </DpView>
-        <DpView style={{}}>
-          <DpTouchableOpacity onPress={handleAddTask} style={styles}>
-            <H2 style={{}}>Add</H2>
+        <DpView style={styles.addButtonContainer}>
+          <DpTouchableOpacity onPress={handleAddTask} style={styles.addButton}>
+            <H2>Add</H2>
           </DpTouchableOpacity>
         </DpView>
       </DpView>
@@ -30,16 +31,16 @@ const Addtask = () => {
 };
 
 const styles = StyleSheet.create({
-  maincontainer: {
+  mainContainer: {
     flex: 1,
   },
   container: {
     flex: 1,
     padding: 20,
   },
-  inputbox: {
+  inputBox: {
     flex: 1,
   },
 });
 
-export default Addtask;
+export default AddTask;

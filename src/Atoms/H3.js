@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text, StyleSheet} from 'react-native';
-import {WHITE_COLOR} from './colors';
+import {WHITE_COLOR} from '../Assets/colors';
 
 const H3 = ({children, style}) => {
   return <Text style={[styles.Text3, style]}>{children}</Text>;

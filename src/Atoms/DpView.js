@@ -5,8 +5,6 @@ const DpView = ({children, style}) => {
   return <View style={[styles.View, style]}>{children}</View>;
 };
 
-const styles = StyleSheet.create({
-  View: {},
-});
+const styles = StyleSheet.create({});
 
 export default DpView;

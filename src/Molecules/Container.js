@@ -1,18 +1,19 @@
 import React from 'react';
 import {StyleSheet} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import {DARK_PURPLE} from '../Atoms/colors';
-import {DpView, H1} from '../Atoms';
-const Container = ({Title, showIcon}) => {
+import {DARK_COLOR, DARK_PURPLE} from '../Assets/colors';
+import {H1, DpView} from '../Atoms';
+
+const Container = ({title, showIcon}) => {
   return (
     <DpView style={styles.headerContainer}>
       {showIcon && (
         <DpView style={styles.icons}>
-          <Icon name="arrow-back" size={30} color="#000" />
+          <Icon name="arrow-back" size={30} color={DARK_COLOR} />
         </DpView>
       )}
-      <DpView style={styles.HeaderText}>
-        <H1>{Title}</H1>
+      <DpView style={styles.headerText}>
+        <H1>{title}</H1>
       </DpView>
     </DpView>
   );
@@ -30,7 +31,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingHorizontal: 15,
   },
-  HeaderText: {
+  headerText: {
     flex: 1,
     justifyContent: 'center',
   },
